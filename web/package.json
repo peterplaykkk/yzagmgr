@@ -1,0 +1,45 @@
+{
+  "name": "yzagmgr-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit && tsc -p e2e/tsconfig.json",
+    "test": "bash ../scripts/test-mem-guard.sh -- vitest run",
+    "test:e2e": "npm run build && npm run check:build && playwright test",
+    "test:api-e2e": "npm run build && npm run check:build && playwright test --config=playwright.api.config.ts",
+    "format:check": "prettier --check .",
+    "check:residue": "node scripts/residue-scan.mjs",
+    "check:build": "node scripts/residue-scan.mjs --require-dist"
+  },
+  "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.11",
+    "@mui/material": "7.3.11",
+    "@visactor/react-vchart": "2.1.2",
+    "i18next": "25.10.10",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-i18next": "16.6.6",
+    "react-router-dom": "7.18.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@testing-library/jest-dom": "6.10.0",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "26.6.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "jsdom": "26.1.0",
+    "msw": "^2.15.0",
+    "prettier": "3.9.8",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "3.2.7"
+  }
+}

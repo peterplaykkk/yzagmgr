@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="yzagmgr">
+  <title>yzagmgr</title>
+  <!--
+    管理页 favicon + 顶栏品牌 mark（app-shell.md §3 同源）：用户定稿 bot-toggle（2026-09-30）。
+    几何与图标定稿同源（逐像素量测）：天线球/杆、大圆角
+    粗描边方头、双眼、腹部开关胶囊（knob 为底色镂空）。底 = token off-black #111111（UC-035
+    A1 残留扫描口径：不出现重置前主题色）。
+  -->
+  <rect width="32" height="32" rx="7" fill="#111111"/>
+  <g fill="#FFFFFF">
+    <circle cx="16" cy="4.2" r="2.12"/>
+    <rect x="15.1" y="4.2" width="1.8" height="4.9"/>
+    <circle cx="12.1" cy="16.8" r="1.92"/>
+    <circle cx="19.9" cy="16.8" r="1.92"/>
+    <rect x="9.2" y="21.5" width="13.5" height="4.1" rx="2.05"/>
+  </g>
+  <rect x="5.93" y="10.11" width="20.21" height="18.83" rx="3.34" fill="none" stroke="#FFFFFF" stroke-width="2.32"/>
+  <circle cx="19.7" cy="23.6" r="1.94" fill="#111111"/>
+</svg>

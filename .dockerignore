@@ -1,0 +1,22 @@
+# Build context hygiene: the Dockerfile COPYs only web/ (sources), go.mod,
+# go.sum, cmd/, internal/ and sdk/ — everything below is dead weight in the
+# build context.
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+**/*.md
+doc
+design
+prd
+scripts
+usecase
+reports
+bin
+web/node_modules
+web/dist
+web/.e2e-bin
+web/test-results
+web/coverage
+web/tsconfig.tsbuildinfo

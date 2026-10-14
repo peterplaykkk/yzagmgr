@@ -1,0 +1,21 @@
+# Go build output
+/bin/
+.bin/
+*.test
+
+# Frontend build artifacts
+node_modules/
+web/dist/
+web/coverage/
+*.tsbuildinfo
+
+# Test and acceptance artifacts
+reports/
+test-results/
+*.junit.xml
+web/.e2e-bin/
+
+# Local environment
+.env
+*.local
+.DS_Store

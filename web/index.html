@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- light-only：仓库硬规则（2026-09-04）。不提供暗色分支，也不接受可分享的主题参数。 -->
+    <meta name="color-scheme" content="light" />
+    <!-- theme-color 取 design-tokens.json 的画布色 `bg.canvas`（冷灰控制台 #F8F9FA，R262 W3a）。 -->
+    <meta name="theme-color" content="#F8F9FA" />
+    <!--
+      管理令牌（api-v1.md §1.1）：yzagmgr 守护进程 serve 本文件时把 content 换成本次进程启动生成的
+      令牌；前端启动时读取一次放进内存，请求带 X-Agmgr-Token。不写 cookie、不进 URL、不进
+      localStorage。开发服务器（vite dev）不注入，此时前端按「无令牌」处理：只有免鉴权的
+      /api/v1/health 与 /api/v1/version 可用，其余请求在发出前就被拒绝并提示刷新页面。
+    -->
+    <meta name="agmgr-token" content="" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>yzagmgr</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

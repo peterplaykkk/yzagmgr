@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+package-lock.json
+# PW 运行产物（报告、trace、截图、JUnit）与自建守护进程二进制：非源码，不参与格式检查。
+test-results/
+.e2e-bin/

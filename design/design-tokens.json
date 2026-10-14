@@ -1,0 +1,1307 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "agmgr 设计 token（W3C DTCG 格式，R262 全量重设计）。唯一来源=本文件；design/tokens.css 由本文件逐值派生，design/tools/check-tokens.mjs 校验两者同源（每个 CSS 变量都能解析回一条 token，值逐字节相等）。命名口径 agmgr.<域>.<...>；CSS 变量名 = --agmgr-<域>-<...>（kebab-case），主题段 semantic.light|dark 在 CSS 变量名中折叠为同一变量名，分别落在 light/dark 两个选择器块。dimension 用 CSS 可读字符串形态（\"16px\"），Figma 导入映射见 design/design-system.md §8。",
+  "agmgr": {
+    "color": {
+      "primitive": {
+        "neutral": {
+          "$description": "冷中性阶（light 主题）。画布/卡/描边/文字的基座；对比度实算见 design-system.md §5。",
+          "0": {
+            "$value": "#FFFFFF",
+            "$type": "color"
+          },
+          "50": {
+            "$value": "#F8F9FA",
+            "$type": "color",
+            "$description": "页面画布"
+          },
+          "75": {
+            "$value": "#F5F6F7",
+            "$type": "color",
+            "$description": "次级底（内嵌区块/侧栏分组底）"
+          },
+          "100": {
+            "$value": "#F2F3F5",
+            "$type": "color",
+            "$description": "基础底/表头底/中性实心 chip"
+          },
+          "200": {
+            "$value": "#E9EAEE",
+            "$type": "color",
+            "$description": "禁用底/中性填充"
+          },
+          "300": {
+            "$value": "#DEE0E3",
+            "$type": "color",
+            "$description": "卡描边（1px）"
+          },
+          "350": {
+            "$value": "#D0D3D6",
+            "$type": "color",
+            "$description": "控件描边（次按钮等）"
+          },
+          "400": {
+            "$value": "#B9BDC4",
+            "$type": "color",
+            "$description": "禁用文字"
+          },
+          "500": {
+            "$value": "#848A94",
+            "$type": "color",
+            "$description": "输入框描边（≥3:1 交互边界）"
+          },
+          "550": {
+            "$value": "#6E7480",
+            "$type": "color",
+            "$description": "三级文字（元信息；白卡 4.69:1）"
+          },
+          "600": {
+            "$value": "#656B75",
+            "$type": "color",
+            "$description": "次级文字（白卡 5.37:1 / 画布 5.09:1）"
+          },
+          "700": {
+            "$value": "#4A4F58",
+            "$type": "color",
+            "$description": "导航空闲字/深灰"
+          },
+          "800": {
+            "$value": "#33373F",
+            "$type": "color"
+          },
+          "900": {
+            "$value": "#1F2329",
+            "$type": "color",
+            "$description": "正文/标题主色（白卡 15.78:1）"
+          },
+          "950": {
+            "$value": "#14171C",
+            "$type": "color",
+            "$description": "最深面（深色 tooltip 底）"
+          }
+        },
+        "neutralDark": {
+          "$description": "冷中性阶（dark 主题）。与 neutral 平行编号；dark 下语义 token 全部引用本族。",
+          "0": {
+            "$value": "#0F1115",
+            "$type": "color",
+            "$description": "页面画布（dark）"
+          },
+          "50": {
+            "$value": "#14171C",
+            "$type": "color",
+            "$description": "次级底（侧栏/分组底）"
+          },
+          "100": {
+            "$value": "#191C22",
+            "$type": "color",
+            "$description": "基础底/表头底"
+          },
+          "150": {
+            "$value": "#1A1D23",
+            "$type": "color",
+            "$description": "卡片面"
+          },
+          "200": {
+            "$value": "#21252C",
+            "$type": "color",
+            "$description": "抬升面（浮层/对话框）"
+          },
+          "250": {
+            "$value": "#262A31",
+            "$type": "color",
+            "$description": "tooltip/内嵌深面"
+          },
+          "300": {
+            "$value": "#2A2E36",
+            "$type": "color",
+            "$description": "卡描边"
+          },
+          "350": {
+            "$value": "#3A3F48",
+            "$type": "color",
+            "$description": "控件描边"
+          },
+          "400": {
+            "$value": "#5E646E",
+            "$type": "color",
+            "$description": "禁用文字"
+          },
+          "500": {
+            "$value": "#6B7280",
+            "$type": "color",
+            "$description": "输入框描边（对面 3.49:1）"
+          },
+          "600": {
+            "$value": "#838A95",
+            "$type": "color",
+            "$description": "三级文字（面 4.85:1）"
+          },
+          "700": {
+            "$value": "#A9AFB9",
+            "$type": "color",
+            "$description": "次级文字（面 7.65:1）"
+          },
+          "900": {
+            "$value": "#E8EAED",
+            "$type": "color",
+            "$description": "正文/标题主色（面 14.01:1）"
+          }
+        },
+        "brand": {
+          "$description": "品牌蓝阶（控制台基准）。brand.primary=标识/选中/焦点；brand.action=主按钮底/链接字（白字对比 5.84:1）。",
+          "50": {
+            "$value": "#F0F4FF",
+            "$type": "color"
+          },
+          "100": {
+            "$value": "#E1EAFF",
+            "$type": "color"
+          },
+          "200": {
+            "$value": "#C7D9FF",
+            "$type": "color"
+          },
+          "300": {
+            "$value": "#9FBDFF",
+            "$type": "color"
+          },
+          "400": {
+            "$value": "#4E83FD",
+            "$type": "color"
+          },
+          "500": {
+            "$value": "#3370FF",
+            "$type": "color",
+            "$description": "品牌主色（白字 4.28:1——只作标识/图形/焦点环，不承载 14px 白字）"
+          },
+          "600": {
+            "$value": "#245BDB",
+            "$type": "color",
+            "$description": "动作蓝：主按钮底、链接字（白字 5.84:1）"
+          },
+          "700": {
+            "$value": "#1C4CBA",
+            "$type": "color",
+            "$description": "hover"
+          },
+          "800": {
+            "$value": "#173D94",
+            "$type": "color",
+            "$description": "pressed"
+          },
+          "900": {
+            "$value": "#122E6E",
+            "$type": "color"
+          }
+        },
+        "brandDark": {
+          "$description": "dark 主题的品牌用色（深底提亮族）。",
+          "200": {
+            "$value": "#7FA5FF",
+            "$type": "color",
+            "$description": "dark 链接字（面 7.02:1）"
+          },
+          "300": {
+            "$value": "#6E9BFF",
+            "$type": "color",
+            "$description": "dark hover"
+          },
+          "400": {
+            "$value": "#4E83FD",
+            "$type": "color",
+            "$description": "dark 主按钮底/焦点环（面 4.81:1；其上用 neutralDark.0 深字）"
+          },
+          "500": {
+            "$value": "#3D6FDB",
+            "$type": "color",
+            "$description": "dark pressed"
+          }
+        },
+        "status": {
+          "$description": "状态色基元（light）。语义 chip = 50 底 + 700 字（全部 ≥4.5:1）；600 作实色点/描边。dark 主题状态值直接落在 semantic.dark.status（14% alpha 合成面）。",
+          "green": {
+            "50": {
+              "$value": "#E8F5EC",
+              "$type": "color"
+            },
+            "600": {
+              "$value": "#218A5C",
+              "$type": "color"
+            },
+            "700": {
+              "$value": "#1B7A44",
+              "$type": "color",
+              "$description": "成功字（自底 4.78:1）"
+            }
+          },
+          "amber": {
+            "50": {
+              "$value": "#FDF2DC",
+              "$type": "color"
+            },
+            "600": {
+              "$value": "#AD7008",
+              "$type": "color"
+            },
+            "700": {
+              "$value": "#96600A",
+              "$type": "color",
+              "$description": "警示字（自底 4.76:1）"
+            }
+          },
+          "red": {
+            "50": {
+              "$value": "#FDECEC",
+              "$type": "color"
+            },
+            "600": {
+              "$value": "#D23A3A",
+              "$type": "color"
+            },
+            "700": {
+              "$value": "#C02A2A",
+              "$type": "color",
+              "$description": "危险字（自底 5.10:1）"
+            }
+          },
+          "blue": {
+            "50": {
+              "$value": "#EAF0FF",
+              "$type": "color"
+            },
+            "600": {
+              "$value": "{agmgr.color.primitive.brand.500}",
+              "$type": "color"
+            },
+            "700": {
+              "$value": "{agmgr.color.primitive.brand.600}",
+              "$type": "color",
+              "$description": "信息字（自底 5.12:1）"
+            }
+          }
+        },
+        "chart": {
+          "categorical": {
+            "light": {
+              "$description": "分类色板（≥12 色，亮底）。全对白卡 ≥3:1；相邻最小 Lab ΔE≈23（蓝/紫对）。1=品牌蓝。",
+              "1": {
+                "$value": "#3370FF",
+                "$type": "color",
+                "$description": "blue（品牌）"
+              },
+              "2": {
+                "$value": "#0E9F9F",
+                "$type": "color",
+                "$description": "teal"
+              },
+              "3": {
+                "$value": "#8B5CF6",
+                "$type": "color",
+                "$description": "violet"
+              },
+              "4": {
+                "$value": "#E8722A",
+                "$type": "color",
+                "$description": "orange"
+              },
+              "5": {
+                "$value": "#12A150",
+                "$type": "color",
+                "$description": "green"
+              },
+              "6": {
+                "$value": "#E5484D",
+                "$type": "color",
+                "$description": "red"
+              },
+              "7": {
+                "$value": "#B7791F",
+                "$type": "color",
+                "$description": "gold"
+              },
+              "8": {
+                "$value": "#0B8BD4",
+                "$type": "color",
+                "$description": "sky"
+              },
+              "9": {
+                "$value": "#D6409F",
+                "$type": "color",
+                "$description": "magenta"
+              },
+              "10": {
+                "$value": "#5F6B7A",
+                "$type": "color",
+                "$description": "slate"
+              },
+              "11": {
+                "$value": "#618A0E",
+                "$type": "color",
+                "$description": "olive"
+              },
+              "12": {
+                "$value": "#8B5E34",
+                "$type": "color",
+                "$description": "brown"
+              }
+            },
+            "dark": {
+              "$description": "分类色板（dark 主题）：与 light 逐序号同色相、深底提亮；全对卡片面 ≥5.6:1。",
+              "1": {
+                "$value": "#6E9BFF",
+                "$type": "color"
+              },
+              "2": {
+                "$value": "#2CC7C0",
+                "$type": "color"
+              },
+              "3": {
+                "$value": "#A78BFA",
+                "$type": "color"
+              },
+              "4": {
+                "$value": "#FF9C54",
+                "$type": "color"
+              },
+              "5": {
+                "$value": "#3DD68C",
+                "$type": "color"
+              },
+              "6": {
+                "$value": "#FF7B7B",
+                "$type": "color"
+              },
+              "7": {
+                "$value": "#E0A83C",
+                "$type": "color"
+              },
+              "8": {
+                "$value": "#4FB3F0",
+                "$type": "color"
+              },
+              "9": {
+                "$value": "#F070BC",
+                "$type": "color"
+              },
+              "10": {
+                "$value": "#94A1B2",
+                "$type": "color"
+              },
+              "11": {
+                "$value": "#A3C93E",
+                "$type": "color"
+              },
+              "12": {
+                "$value": "#C08A5A",
+                "$type": "color"
+              }
+            }
+          },
+          "ramp": {
+            "blue": {
+              "light": {
+                "$description": "有序蓝阶（监控三卡按模型取色；与 VChart 现状 orderedSeriesColors 同构替换：base 由 info #1F6C9F 换成动作蓝，6 阶不变）。后两阶（4/5 阶）<3:1，只作堆叠浅段/双系列次线（须有深色锚）。",
+                "0": {
+                  "$value": "#245BDB",
+                  "$type": "color"
+                },
+                "1": {
+                  "$value": "#4574E0",
+                  "$type": "color"
+                },
+                "2": {
+                  "$value": "#668CE6",
+                  "$type": "color"
+                },
+                "3": {
+                  "$value": "#87A5EB",
+                  "$type": "color"
+                },
+                "4": {
+                  "$value": "#A7BDF1",
+                  "$type": "color"
+                },
+                "5": {
+                  "$value": "#C8D6F6",
+                  "$type": "color"
+                }
+              },
+              "dark": {
+                "$description": "有序蓝阶（dark）：阶梯向白提亮（提高对比）；全阶面 ≥6.2:1。",
+                "0": {
+                  "$value": "#6E9BFF",
+                  "$type": "color"
+                },
+                "1": {
+                  "$value": "#84AAFF",
+                  "$type": "color"
+                },
+                "2": {
+                  "$value": "#9AB9FF",
+                  "$type": "color"
+                },
+                "3": {
+                  "$value": "#AFC8FF",
+                  "$type": "color"
+                },
+                "4": {
+                  "$value": "#C5D7FF",
+                  "$type": "color"
+                },
+                "5": {
+                  "$value": "#DBE6FF",
+                  "$type": "color"
+                }
+              }
+            },
+            "failure": {
+              "light": {
+                "$description": "失败码线族专用红阶（故障独立视觉层；与现状 orderedFailureColors 同构：4 阶不变，base 换 #C02A2A）。",
+                "0": {
+                  "$value": "#C02A2A",
+                  "$type": "color"
+                },
+                "1": {
+                  "$value": "#C94A4A",
+                  "$type": "color"
+                },
+                "2": {
+                  "$value": "#D36A6A",
+                  "$type": "color"
+                },
+                "3": {
+                  "$value": "#DC8A8A",
+                  "$type": "color"
+                }
+              },
+              "dark": {
+                "0": {
+                  "$value": "#FF7B7B",
+                  "$type": "color"
+                },
+                "1": {
+                  "$value": "#FF9595",
+                  "$type": "color"
+                },
+                "2": {
+                  "$value": "#FFB0B0",
+                  "$type": "color"
+                },
+                "3": {
+                  "$value": "#FFCACA",
+                  "$type": "color"
+                }
+              }
+            }
+          },
+          "sequential": {
+            "$description": "有序 sequential 蓝阶 = 品牌蓝阶（别名；热力图/密度图/单色深浅场景）。",
+            "50": {
+              "$value": "{agmgr.color.primitive.brand.50}",
+              "$type": "color"
+            },
+            "100": {
+              "$value": "{agmgr.color.primitive.brand.100}",
+              "$type": "color"
+            },
+            "200": {
+              "$value": "{agmgr.color.primitive.brand.200}",
+              "$type": "color"
+            },
+            "300": {
+              "$value": "{agmgr.color.primitive.brand.300}",
+              "$type": "color"
+            },
+            "400": {
+              "$value": "{agmgr.color.primitive.brand.400}",
+              "$type": "color"
+            },
+            "500": {
+              "$value": "{agmgr.color.primitive.brand.500}",
+              "$type": "color"
+            },
+            "600": {
+              "$value": "{agmgr.color.primitive.brand.600}",
+              "$type": "color"
+            },
+            "700": {
+              "$value": "{agmgr.color.primitive.brand.700}",
+              "$type": "color"
+            },
+            "800": {
+              "$value": "{agmgr.color.primitive.brand.800}",
+              "$type": "color"
+            },
+            "900": {
+              "$value": "{agmgr.color.primitive.brand.900}",
+              "$type": "color"
+            }
+          }
+        }
+      },
+      "semantic": {
+        "light": {
+          "$description": "语义层（light）。组件只引用语义 token，不直接引用基元；交互态用透明度叠加（fill.*），不用固定色。",
+          "bg": {
+            "canvas": {
+              "$value": "{agmgr.color.primitive.neutral.50}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "{agmgr.color.primitive.neutral.75}",
+              "$type": "color"
+            },
+            "base": {
+              "$value": "{agmgr.color.primitive.neutral.100}",
+              "$type": "color"
+            },
+            "raised": {
+              "$value": "{agmgr.color.primitive.neutral.0}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{agmgr.color.primitive.neutral.200}",
+              "$type": "color",
+              "$description": "禁用底（组件语义层）"
+            }
+          },
+          "surface": {
+            "default": {
+              "$value": "{agmgr.color.primitive.neutral.0}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "{agmgr.color.primitive.neutral.75}",
+              "$type": "color"
+            }
+          },
+          "border": {
+            "default": {
+              "$value": "{agmgr.color.primitive.neutral.300}",
+              "$type": "color"
+            },
+            "control": {
+              "$value": "{agmgr.color.primitive.neutral.350}",
+              "$type": "color"
+            },
+            "input": {
+              "$value": "{agmgr.color.primitive.neutral.500}",
+              "$type": "color"
+            },
+            "divider": {
+              "$value": "rgba(31,35,41,0.10)",
+              "$type": "color"
+            }
+          },
+          "text": {
+            "primary": {
+              "$value": "{agmgr.color.primitive.neutral.900}",
+              "$type": "color"
+            },
+            "secondary": {
+              "$value": "{agmgr.color.primitive.neutral.600}",
+              "$type": "color"
+            },
+            "tertiary": {
+              "$value": "{agmgr.color.primitive.neutral.550}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{agmgr.color.primitive.neutral.400}",
+              "$type": "color"
+            },
+            "inverse": {
+              "$value": "{agmgr.color.primitive.neutral.0}",
+              "$type": "color"
+            },
+            "link": {
+              "$value": "{agmgr.color.primitive.brand.600}",
+              "$type": "color"
+            }
+          },
+          "brand": {
+            "primary": {
+              "$value": "{agmgr.color.primitive.brand.500}",
+              "$type": "color"
+            },
+            "action": {
+              "$value": "{agmgr.color.primitive.brand.600}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{agmgr.color.primitive.brand.700}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{agmgr.color.primitive.brand.800}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "{agmgr.color.primitive.brand.50}",
+              "$type": "color"
+            },
+            "selected": {
+              "$value": "{agmgr.color.primitive.brand.100}",
+              "$type": "color"
+            },
+            "on": {
+              "$value": "{agmgr.color.primitive.neutral.0}",
+              "$type": "color",
+              "$description": "品牌底上的文字/图标色"
+            }
+          },
+          "fill": {
+            "$description": "透明度叠加交互态（任何底上都自动正确）。",
+            "hover": {
+              "$value": "rgba(31,35,41,0.06)",
+              "$type": "color"
+            },
+            "active": {
+              "$value": "rgba(31,35,41,0.10)",
+              "$type": "color"
+            },
+            "selected": {
+              "$value": "rgba(51,112,255,0.08)",
+              "$type": "color"
+            },
+            "selectedStrong": {
+              "$value": "rgba(51,112,255,0.14)",
+              "$type": "color"
+            },
+            "scrim": {
+              "$value": "rgba(20,23,28,0.45)",
+              "$type": "color"
+            }
+          },
+          "focus": {
+            "ring": {
+              "$value": "{agmgr.color.primitive.brand.500}",
+              "$type": "color"
+            },
+            "ringOffset": {
+              "$value": "{agmgr.color.primitive.neutral.0}",
+              "$type": "color"
+            }
+          },
+          "status": {
+            "success": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.status.green.50}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.status.green.700}",
+                "$type": "color"
+              }
+            },
+            "warning": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.status.amber.50}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.status.amber.700}",
+                "$type": "color"
+              }
+            },
+            "danger": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.status.red.50}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.status.red.700}",
+                "$type": "color"
+              }
+            },
+            "info": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.status.blue.50}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.status.blue.700}",
+                "$type": "color"
+              }
+            },
+            "neutral": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.neutral.100}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.neutral.600}",
+                "$type": "color"
+              }
+            }
+          },
+          "chart": {
+            "axis": {
+              "$value": "{agmgr.color.primitive.neutral.600}",
+              "$type": "color"
+            },
+            "grid": {
+              "$value": "{agmgr.color.primitive.neutral.300}",
+              "$type": "color"
+            },
+            "tooltip": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.neutral.900}",
+                "$type": "color"
+              },
+              "text": {
+                "$value": "{agmgr.color.primitive.neutral.0}",
+                "$type": "color"
+              }
+            }
+          }
+        },
+        "dark": {
+          "$description": "语义层（dark）。token 名与 light 逐条同名（CSS 变量折叠为同一名）；状态值 = 深色 fg 按 14% alpha 合成到卡片面的实算结果。",
+          "bg": {
+            "canvas": {
+              "$value": "{agmgr.color.primitive.neutralDark.0}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "{agmgr.color.primitive.neutralDark.50}",
+              "$type": "color"
+            },
+            "base": {
+              "$value": "{agmgr.color.primitive.neutralDark.100}",
+              "$type": "color"
+            },
+            "raised": {
+              "$value": "{agmgr.color.primitive.neutralDark.200}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{agmgr.color.primitive.neutralDark.300}",
+              "$type": "color",
+              "$description": "禁用底（组件语义层）"
+            }
+          },
+          "surface": {
+            "default": {
+              "$value": "{agmgr.color.primitive.neutralDark.150}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "{agmgr.color.primitive.neutralDark.100}",
+              "$type": "color"
+            }
+          },
+          "border": {
+            "default": {
+              "$value": "{agmgr.color.primitive.neutralDark.300}",
+              "$type": "color"
+            },
+            "control": {
+              "$value": "{agmgr.color.primitive.neutralDark.350}",
+              "$type": "color"
+            },
+            "input": {
+              "$value": "{agmgr.color.primitive.neutralDark.500}",
+              "$type": "color"
+            },
+            "divider": {
+              "$value": "rgba(255,255,255,0.08)",
+              "$type": "color"
+            }
+          },
+          "text": {
+            "primary": {
+              "$value": "{agmgr.color.primitive.neutralDark.900}",
+              "$type": "color"
+            },
+            "secondary": {
+              "$value": "{agmgr.color.primitive.neutralDark.700}",
+              "$type": "color"
+            },
+            "tertiary": {
+              "$value": "{agmgr.color.primitive.neutralDark.600}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{agmgr.color.primitive.neutralDark.400}",
+              "$type": "color"
+            },
+            "inverse": {
+              "$value": "{agmgr.color.primitive.neutralDark.0}",
+              "$type": "color"
+            },
+            "link": {
+              "$value": "{agmgr.color.primitive.brandDark.200}",
+              "$type": "color"
+            }
+          },
+          "brand": {
+            "primary": {
+              "$value": "{agmgr.color.primitive.brandDark.400}",
+              "$type": "color"
+            },
+            "action": {
+              "$value": "{agmgr.color.primitive.brandDark.400}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{agmgr.color.primitive.brandDark.300}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{agmgr.color.primitive.brandDark.500}",
+              "$type": "color"
+            },
+            "subtle": {
+              "$value": "rgba(78,131,253,0.14)",
+              "$type": "color"
+            },
+            "selected": {
+              "$value": "rgba(78,131,253,0.18)",
+              "$type": "color"
+            },
+            "on": {
+              "$value": "{agmgr.color.primitive.neutralDark.0}",
+              "$type": "color",
+              "$description": "深字压在亮蓝底（对比 5.39:1）"
+            }
+          },
+          "fill": {
+            "hover": {
+              "$value": "rgba(255,255,255,0.06)",
+              "$type": "color"
+            },
+            "active": {
+              "$value": "rgba(255,255,255,0.10)",
+              "$type": "color"
+            },
+            "selected": {
+              "$value": "rgba(78,131,253,0.18)",
+              "$type": "color"
+            },
+            "selectedStrong": {
+              "$value": "rgba(78,131,253,0.26)",
+              "$type": "color"
+            },
+            "scrim": {
+              "$value": "rgba(0,0,0,0.55)",
+              "$type": "color"
+            }
+          },
+          "focus": {
+            "ring": {
+              "$value": "{agmgr.color.primitive.brandDark.400}",
+              "$type": "color"
+            },
+            "ringOffset": {
+              "$value": "{agmgr.color.primitive.neutralDark.0}",
+              "$type": "color"
+            }
+          },
+          "status": {
+            "success": {
+              "bg": {
+                "$value": "#213431",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "#4CC38A",
+                "$type": "color",
+                "$description": "面 7.62:1 / 自底 5.92:1"
+              }
+            },
+            "warning": {
+              "bg": {
+                "$value": "#393327",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "#F5B73D",
+                "$type": "color",
+                "$description": "面 9.42:1 / 自底 6.99:1"
+              }
+            },
+            "danger": {
+              "bg": {
+                "$value": "#3A2A2F",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "#FF7A7A",
+                "$type": "color",
+                "$description": "面 6.69:1 / 自底 5.36:1"
+              }
+            },
+            "info": {
+              "bg": {
+                "$value": "#262F42",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "#7FA5FF",
+                "$type": "color",
+                "$description": "面 7.02:1 / 自底 4.97:1"
+              }
+            },
+            "neutral": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.neutralDark.250}",
+                "$type": "color"
+              },
+              "fg": {
+                "$value": "{agmgr.color.primitive.neutralDark.700}",
+                "$type": "color",
+                "$description": "自底 6.53:1"
+              }
+            }
+          },
+          "chart": {
+            "axis": {
+              "$value": "{agmgr.color.primitive.neutralDark.700}",
+              "$type": "color"
+            },
+            "grid": {
+              "$value": "{agmgr.color.primitive.neutralDark.300}",
+              "$type": "color"
+            },
+            "tooltip": {
+              "bg": {
+                "$value": "{agmgr.color.primitive.neutralDark.250}",
+                "$type": "color"
+              },
+              "text": {
+                "$value": "{agmgr.color.primitive.neutralDark.900}",
+                "$type": "color"
+              }
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "$description": "字体体系：零外链（离线硬需求）、中文优先栈、数字一律 tabular-nums。字号下限与 UC-099 契约对齐（正文 14–16px、表头标签 11px）。",
+      "family": {
+        "ui": {
+          "$value": "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Helvetica Neue', system-ui, sans-serif",
+          "$type": "fontFamily"
+        },
+        "mono": {
+          "$value": "'SF Mono', ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace",
+          "$type": "fontFamily",
+          "$description": "ID/路径/耗时/token 计数等技术值"
+        }
+      },
+      "size": {
+        "metric": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "首屏 KPI 大值（每屏 ≤6 个）"
+        },
+        "display": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "统计卡/关键数值"
+        },
+        "h1": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "页面标题（每页恰好一个 h1）"
+        },
+        "h2": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$description": "区块/图表卡标题"
+        },
+        "h3": {
+          "$value": "13px",
+          "$type": "dimension",
+          "$description": "嵌套次级标题"
+        },
+        "body": {
+          "$value": "14px",
+          "$type": "dimension"
+        },
+        "caption": {
+          "$value": "12px",
+          "$type": "dimension",
+          "$description": "说明文字/卡头 caption 槽"
+        },
+        "label": {
+          "$value": "11px",
+          "$type": "dimension",
+          "$description": "全大写小标签唯一形态（表头/徽标/overline）"
+        },
+        "mono": {
+          "$value": "12px",
+          "$type": "dimension"
+        },
+        "nav": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$description": "侧栏一级项"
+        },
+        "navChild": {
+          "$value": "13px",
+          "$type": "dimension",
+          "$description": "侧栏二级项"
+        }
+      },
+      "lineHeight": {
+        "metric": {
+          "$value": "32px",
+          "$type": "dimension"
+        },
+        "display": {
+          "$value": "28px",
+          "$type": "dimension"
+        },
+        "h1": {
+          "$value": "26px",
+          "$type": "dimension"
+        },
+        "h2": {
+          "$value": "22px",
+          "$type": "dimension"
+        },
+        "h3": {
+          "$value": "20px",
+          "$type": "dimension"
+        },
+        "body": {
+          "$value": "22px",
+          "$type": "dimension"
+        },
+        "caption": {
+          "$value": "18px",
+          "$type": "dimension"
+        },
+        "label": {
+          "$value": "16px",
+          "$type": "dimension"
+        },
+        "mono": {
+          "$value": "18px",
+          "$type": "dimension"
+        }
+      },
+      "weight": {
+        "regular": {
+          "$value": 400,
+          "$type": "fontWeight"
+        },
+        "medium": {
+          "$value": 500,
+          "$type": "fontWeight",
+          "$description": "标签/选中态导航/按钮"
+        },
+        "semibold": {
+          "$value": 600,
+          "$type": "fontWeight",
+          "$description": "标题/卡头"
+        },
+        "bold": {
+          "$value": 650,
+          "$type": "fontWeight",
+          "$description": "h1/数值"
+        },
+        "heavy": {
+          "$value": 700,
+          "$type": "fontWeight",
+          "$description": "KPI 大值"
+        }
+      },
+      "letterSpacing": {
+        "tight": {
+          "$value": "-0.02em",
+          "$type": "dimension",
+          "$description": "h1/display/metric 负字距"
+        },
+        "normal": {
+          "$value": "0em",
+          "$type": "dimension"
+        },
+        "label": {
+          "$value": "0.06em",
+          "$type": "dimension",
+          "$description": "全大写小标签"
+        }
+      }
+    },
+    "spacing": {
+      "$description": "8pt 网格（4 为半档）。区块间 24/32，页内分节 32/48，卡内边距 16–24。",
+      "2xs": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "xs": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "2xl": {
+        "$value": "48px",
+        "$type": "dimension"
+      },
+      "3xl": {
+        "$value": "64px",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$description": "造型阶：chip 4 / 控件 6 / 输入 6 / 卡 10 / 浮层 12；pill 仅 ≤24px 计数胶囊一种。",
+      "xs": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "sm": {
+        "$value": "6px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "full": {
+        "$value": "999px",
+        "$type": "dimension"
+      }
+    },
+    "shadow": {
+      "light": {
+        "xs": {
+          "$value": "0 1px 2px rgba(31,35,41,0.06)",
+          "$type": "shadow",
+          "$description": "卡 hover/轻微抬升"
+        },
+        "sm": {
+          "$value": "0 2px 6px rgba(31,35,41,0.06), 0 1px 2px rgba(31,35,41,0.04)",
+          "$type": "shadow",
+          "$description": "下拉/菜单/popover"
+        },
+        "md": {
+          "$value": "0 8px 24px rgba(31,35,41,0.10), 0 2px 6px rgba(31,35,41,0.05)",
+          "$type": "shadow",
+          "$description": "对话框/抽屉"
+        },
+        "lg": {
+          "$value": "0 16px 48px rgba(31,35,41,0.14), 0 4px 12px rgba(31,35,41,0.06)",
+          "$type": "shadow",
+          "$description": "命令面板/大浮层"
+        }
+      },
+      "dark": {
+        "xs": {
+          "$value": "0 1px 2px rgba(0,0,0,0.40)",
+          "$type": "shadow"
+        },
+        "sm": {
+          "$value": "0 2px 8px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.30)",
+          "$type": "shadow"
+        },
+        "md": {
+          "$value": "0 8px 24px rgba(0,0,0,0.50), 0 2px 6px rgba(0,0,0,0.35)",
+          "$type": "shadow"
+        },
+        "lg": {
+          "$value": "0 16px 48px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.40)",
+          "$type": "shadow"
+        }
+      }
+    },
+    "zIndex": {
+      "$description": "层级尺（与 MUI zIndex 对齐）：sticky 表头 100 是本仓自定；popover 与 modal 同档（MUI Popover 默认取 modal 档）。",
+      "base": {
+        "$value": 0,
+        "$type": "number"
+      },
+      "sticky": {
+        "$value": 100,
+        "$type": "number",
+        "$description": "表头/固定列/侧栏吸顶"
+      },
+      "appBar": {
+        "$value": 1100,
+        "$type": "number"
+      },
+      "drawer": {
+        "$value": 1200,
+        "$type": "number"
+      },
+      "modal": {
+        "$value": 1300,
+        "$type": "number"
+      },
+      "popover": {
+        "$value": 1300,
+        "$type": "number"
+      },
+      "toast": {
+        "$value": 1400,
+        "$type": "number"
+      },
+      "tooltip": {
+        "$value": 1500,
+        "$type": "number"
+      }
+    },
+    "motion": {
+      "$description": "克制动效：反馈 120 / 常态 160 / 进入 220；linear 与 ease-in-out 禁用；prefers-reduced-motion 下一律 ≤0.01ms。",
+      "duration": {
+        "fast": {
+          "$value": "120ms",
+          "$type": "duration",
+          "$description": "hover/pressed 反馈"
+        },
+        "base": {
+          "$value": "160ms",
+          "$type": "duration",
+          "$description": "展开/收起/淡入"
+        },
+        "slow": {
+          "$value": "220ms",
+          "$type": "duration",
+          "$description": "抽屉/对话框进入"
+        }
+      },
+      "easing": {
+        "standard": {
+          "$value": "cubic-bezier(0.2, 0, 0, 1)",
+          "$type": "cubicBezier",
+          "$description": "短促缓出（全站默认）"
+        },
+        "enter": {
+          "$value": "cubic-bezier(0, 0, 0.2, 1)",
+          "$type": "cubicBezier"
+        },
+        "exit": {
+          "$value": "cubic-bezier(0.4, 0, 1, 1)",
+          "$type": "cubicBezier"
+        }
+      }
+    }
+  }
+}

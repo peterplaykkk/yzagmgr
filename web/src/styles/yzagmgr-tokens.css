@@ -1,0 +1,226 @@
+/* yzagmgr runtime tokens —— light-only application subset of the canonical design tokens.
+ *
+ * Values match the canonical light token set. The product has one light theme; canonical dark
+ * design values are not emitted by the runtime stylesheet.
+ *
+ * CSS variables are consumed through the semantic token names in `theme/tokens.ts`.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ── color primitive · neutral ─────────────────────────────────────── */
+  --agmgr-color-primitive-neutral-0: #ffffff;
+  --agmgr-color-primitive-neutral-50: #f8f9fa;
+  --agmgr-color-primitive-neutral-75: #f5f6f7;
+  --agmgr-color-primitive-neutral-100: #f2f3f5;
+  --agmgr-color-primitive-neutral-200: #e9eaee;
+  --agmgr-color-primitive-neutral-300: #dee0e3;
+  --agmgr-color-primitive-neutral-350: #d0d3d6;
+  --agmgr-color-primitive-neutral-400: #b9bdc4;
+  --agmgr-color-primitive-neutral-500: #848a94;
+  --agmgr-color-primitive-neutral-550: #6e7480;
+  --agmgr-color-primitive-neutral-600: #656b75;
+  --agmgr-color-primitive-neutral-700: #4a4f58;
+  --agmgr-color-primitive-neutral-800: #33373f;
+  --agmgr-color-primitive-neutral-900: #1f2329;
+  --agmgr-color-primitive-neutral-950: #14171c;
+
+  /* ── color primitive · neutralDark ─────────────────────────────────── */
+  --agmgr-color-primitive-neutral-dark-0: #0f1115;
+  --agmgr-color-primitive-neutral-dark-50: #14171c;
+  --agmgr-color-primitive-neutral-dark-100: #191c22;
+  --agmgr-color-primitive-neutral-dark-150: #1a1d23;
+  --agmgr-color-primitive-neutral-dark-200: #21252c;
+  --agmgr-color-primitive-neutral-dark-250: #262a31;
+  --agmgr-color-primitive-neutral-dark-300: #2a2e36;
+  --agmgr-color-primitive-neutral-dark-350: #3a3f48;
+  --agmgr-color-primitive-neutral-dark-400: #5e646e;
+  --agmgr-color-primitive-neutral-dark-500: #6b7280;
+  --agmgr-color-primitive-neutral-dark-600: #838a95;
+  --agmgr-color-primitive-neutral-dark-700: #a9afb9;
+  --agmgr-color-primitive-neutral-dark-900: #e8eaed;
+
+  /* ── color primitive · brand / brandDark ───────────────────────────── */
+  --agmgr-color-primitive-brand-50: #f0f4ff;
+  --agmgr-color-primitive-brand-100: #e1eaff;
+  --agmgr-color-primitive-brand-200: #c7d9ff;
+  --agmgr-color-primitive-brand-300: #9fbdff;
+  --agmgr-color-primitive-brand-400: #4e83fd;
+  --agmgr-color-primitive-brand-500: #3370ff;
+  --agmgr-color-primitive-brand-600: #245bdb;
+  --agmgr-color-primitive-brand-700: #1c4cba;
+  --agmgr-color-primitive-brand-800: #173d94;
+  --agmgr-color-primitive-brand-900: #122e6e;
+  --agmgr-color-primitive-brand-dark-200: #7fa5ff;
+  --agmgr-color-primitive-brand-dark-300: #6e9bff;
+  --agmgr-color-primitive-brand-dark-400: #4e83fd;
+  --agmgr-color-primitive-brand-dark-500: #3d6fdb;
+
+  /* ── color primitive · status ──────────────────────────────────────── */
+  --agmgr-color-primitive-status-green-50: #e8f5ec;
+  --agmgr-color-primitive-status-green-600: #218a5c;
+  --agmgr-color-primitive-status-green-700: #1b7a44;
+  --agmgr-color-primitive-status-amber-50: #fdf2dc;
+  --agmgr-color-primitive-status-amber-600: #ad7008;
+  --agmgr-color-primitive-status-amber-700: #96600a;
+  --agmgr-color-primitive-status-red-50: #fdecec;
+  --agmgr-color-primitive-status-red-600: #d23a3a;
+  --agmgr-color-primitive-status-red-700: #c02a2a;
+  --agmgr-color-primitive-status-blue-50: #eaf0ff;
+  --agmgr-color-primitive-status-blue-600: #3370ff;
+  --agmgr-color-primitive-status-blue-700: #245bdb;
+
+  /* ── color primitive · chart（categorical/ramp 为 light 值；dark 在下方覆盖） ─ */
+  --agmgr-color-primitive-chart-categorical-1: #3370ff;
+  --agmgr-color-primitive-chart-categorical-2: #0e9f9f;
+  --agmgr-color-primitive-chart-categorical-3: #8b5cf6;
+  --agmgr-color-primitive-chart-categorical-4: #e8722a;
+  --agmgr-color-primitive-chart-categorical-5: #12a150;
+  --agmgr-color-primitive-chart-categorical-6: #e5484d;
+  --agmgr-color-primitive-chart-categorical-7: #b7791f;
+  --agmgr-color-primitive-chart-categorical-8: #0b8bd4;
+  --agmgr-color-primitive-chart-categorical-9: #d6409f;
+  --agmgr-color-primitive-chart-categorical-10: #5f6b7a;
+  --agmgr-color-primitive-chart-categorical-11: #618a0e;
+  --agmgr-color-primitive-chart-categorical-12: #8b5e34;
+  --agmgr-color-primitive-chart-ramp-blue-0: #245bdb;
+  --agmgr-color-primitive-chart-ramp-blue-1: #4574e0;
+  --agmgr-color-primitive-chart-ramp-blue-2: #668ce6;
+  --agmgr-color-primitive-chart-ramp-blue-3: #87a5eb;
+  --agmgr-color-primitive-chart-ramp-blue-4: #a7bdf1;
+  --agmgr-color-primitive-chart-ramp-blue-5: #c8d6f6;
+  --agmgr-color-primitive-chart-ramp-failure-0: #c02a2a;
+  --agmgr-color-primitive-chart-ramp-failure-1: #c94a4a;
+  --agmgr-color-primitive-chart-ramp-failure-2: #d36a6a;
+  --agmgr-color-primitive-chart-ramp-failure-3: #dc8a8a;
+  --agmgr-color-primitive-chart-sequential-50: #f0f4ff;
+  --agmgr-color-primitive-chart-sequential-100: #e1eaff;
+  --agmgr-color-primitive-chart-sequential-200: #c7d9ff;
+  --agmgr-color-primitive-chart-sequential-300: #9fbdff;
+  --agmgr-color-primitive-chart-sequential-400: #4e83fd;
+  --agmgr-color-primitive-chart-sequential-500: #3370ff;
+  --agmgr-color-primitive-chart-sequential-600: #245bdb;
+  --agmgr-color-primitive-chart-sequential-700: #1c4cba;
+  --agmgr-color-primitive-chart-sequential-800: #173d94;
+  --agmgr-color-primitive-chart-sequential-900: #122e6e;
+
+  /* ── color semantic（light；dark 同名覆盖） ─────────────────────────── */
+  --agmgr-color-semantic-bg-canvas: #f8f9fa;
+  --agmgr-color-semantic-bg-subtle: #f5f6f7;
+  --agmgr-color-semantic-bg-base: #f2f3f5;
+  --agmgr-color-semantic-bg-raised: #ffffff;
+  --agmgr-color-semantic-bg-disabled: #e9eaee;
+  --agmgr-color-semantic-surface-default: #ffffff;
+  --agmgr-color-semantic-surface-subtle: #f5f6f7;
+  --agmgr-color-semantic-border-default: #dee0e3;
+  --agmgr-color-semantic-border-control: #d0d3d6;
+  --agmgr-color-semantic-border-input: #848a94;
+  --agmgr-color-semantic-border-divider: rgba(31, 35, 41, 0.1);
+  --agmgr-color-semantic-text-primary: #1f2329;
+  --agmgr-color-semantic-text-secondary: #656b75;
+  --agmgr-color-semantic-text-tertiary: #6e7480;
+  --agmgr-color-semantic-text-disabled: #b9bdc4;
+  --agmgr-color-semantic-text-inverse: #ffffff;
+  --agmgr-color-semantic-text-link: #245bdb;
+  --agmgr-color-semantic-brand-primary: #3370ff;
+  --agmgr-color-semantic-brand-action: #245bdb;
+  --agmgr-color-semantic-brand-hover: #1c4cba;
+  --agmgr-color-semantic-brand-pressed: #173d94;
+  --agmgr-color-semantic-brand-subtle: #f0f4ff;
+  --agmgr-color-semantic-brand-selected: #e1eaff;
+  --agmgr-color-semantic-brand-on: #ffffff;
+  --agmgr-color-semantic-fill-hover: rgba(31, 35, 41, 0.06);
+  --agmgr-color-semantic-fill-active: rgba(31, 35, 41, 0.1);
+  --agmgr-color-semantic-fill-selected: rgba(51, 112, 255, 0.08);
+  --agmgr-color-semantic-fill-selected-strong: rgba(51, 112, 255, 0.14);
+  --agmgr-color-semantic-fill-scrim: rgba(20, 23, 28, 0.45);
+  --agmgr-color-semantic-focus-ring: #3370ff;
+  --agmgr-color-semantic-focus-ring-offset: #ffffff;
+  --agmgr-color-semantic-status-success-bg: #e8f5ec;
+  --agmgr-color-semantic-status-success-fg: #1b7a44;
+  --agmgr-color-semantic-status-warning-bg: #fdf2dc;
+  --agmgr-color-semantic-status-warning-fg: #96600a;
+  --agmgr-color-semantic-status-danger-bg: #fdecec;
+  --agmgr-color-semantic-status-danger-fg: #c02a2a;
+  --agmgr-color-semantic-status-info-bg: #eaf0ff;
+  --agmgr-color-semantic-status-info-fg: #245bdb;
+  --agmgr-color-semantic-status-neutral-bg: #f2f3f5;
+  --agmgr-color-semantic-status-neutral-fg: #656b75;
+  --agmgr-color-semantic-chart-axis: #656b75;
+  --agmgr-color-semantic-chart-grid: #dee0e3;
+  --agmgr-color-semantic-chart-tooltip-bg: #1f2329;
+  --agmgr-color-semantic-chart-tooltip-text: #ffffff;
+  /* ── shadow（light；dark 同名覆盖） ─────────────────────────────────── */
+  --agmgr-shadow-xs: 0 1px 2px rgba(31, 35, 41, 0.06);
+  --agmgr-shadow-sm: 0 2px 6px rgba(31, 35, 41, 0.06), 0 1px 2px rgba(31, 35, 41, 0.04);
+  --agmgr-shadow-md: 0 8px 24px rgba(31, 35, 41, 0.1), 0 2px 6px rgba(31, 35, 41, 0.05);
+  --agmgr-shadow-lg: 0 16px 48px rgba(31, 35, 41, 0.14), 0 4px 12px rgba(31, 35, 41, 0.06);
+
+  /* ── typography ────────────────────────────────────────────────────── */
+  --agmgr-typography-family-ui:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Noto Sans CJK SC', 'Helvetica Neue', system-ui, sans-serif;
+  --agmgr-typography-family-mono:
+    'SF Mono', ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace;
+  --agmgr-typography-size-metric: 24px;
+  --agmgr-typography-size-display: 20px;
+  --agmgr-typography-size-h1: 18px;
+  --agmgr-typography-size-h2: 14px;
+  --agmgr-typography-size-h3: 13px;
+  --agmgr-typography-size-body: 14px;
+  --agmgr-typography-size-caption: 12px;
+  --agmgr-typography-size-label: 11px;
+  --agmgr-typography-size-mono: 12px;
+  --agmgr-typography-size-nav: 14px;
+  --agmgr-typography-size-nav-child: 13px;
+  --agmgr-typography-line-height-metric: 32px;
+  --agmgr-typography-line-height-display: 28px;
+  --agmgr-typography-line-height-h1: 26px;
+  --agmgr-typography-line-height-h2: 22px;
+  --agmgr-typography-line-height-h3: 20px;
+  --agmgr-typography-line-height-body: 22px;
+  --agmgr-typography-line-height-caption: 18px;
+  --agmgr-typography-line-height-label: 16px;
+  --agmgr-typography-line-height-mono: 18px;
+  --agmgr-typography-weight-regular: 400;
+  --agmgr-typography-weight-medium: 500;
+  --agmgr-typography-weight-semibold: 600;
+  --agmgr-typography-weight-bold: 650;
+  --agmgr-typography-weight-heavy: 700;
+  --agmgr-typography-letter-spacing-tight: -0.02em;
+  --agmgr-typography-letter-spacing-normal: 0em;
+  --agmgr-typography-letter-spacing-label: 0.06em;
+
+  /* ── spacing / radius ──────────────────────────────────────────────── */
+  --agmgr-spacing-2xs: 4px;
+  --agmgr-spacing-xs: 8px;
+  --agmgr-spacing-sm: 12px;
+  --agmgr-spacing-md: 16px;
+  --agmgr-spacing-lg: 24px;
+  --agmgr-spacing-xl: 32px;
+  --agmgr-spacing-2xl: 48px;
+  --agmgr-spacing-3xl: 64px;
+  --agmgr-radius-xs: 4px;
+  --agmgr-radius-sm: 6px;
+  --agmgr-radius-md: 8px;
+  --agmgr-radius-lg: 10px;
+  --agmgr-radius-xl: 12px;
+  --agmgr-radius-full: 999px;
+
+  /* ── zIndex / motion ───────────────────────────────────────────────── */
+  --agmgr-z-index-base: 0;
+  --agmgr-z-index-sticky: 100;
+  --agmgr-z-index-app-bar: 1100;
+  --agmgr-z-index-drawer: 1200;
+  --agmgr-z-index-modal: 1300;
+  --agmgr-z-index-popover: 1300;
+  --agmgr-z-index-toast: 1400;
+  --agmgr-z-index-tooltip: 1500;
+  --agmgr-motion-duration-fast: 120ms;
+  --agmgr-motion-duration-base: 160ms;
+  --agmgr-motion-duration-slow: 220ms;
+  --agmgr-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --agmgr-motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --agmgr-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+}
